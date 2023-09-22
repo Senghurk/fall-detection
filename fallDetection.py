@@ -2,6 +2,7 @@ import cv2, numpy as np, time
 import angleMonitor, fallAction
 
 class backgroundSub:
+    
     history = 200
     varThresh = 64
     detectShadows = True
@@ -9,6 +10,7 @@ class backgroundSub:
     curFrame = 0
 
     def MOG(self):
+
         cap = cv2.VideoCapture("pick.mp4")
         fgbg = cv2.createBackgroundSubtractorMOG2(self.history, self.varThresh, self.detectShadows)
 
